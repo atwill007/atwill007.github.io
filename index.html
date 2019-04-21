@@ -333,7 +333,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/20/flutter/" itemprop="url">flutter</a></h1>
+                <a class="post-title-link" href="/2019/04/20/flutter/" itemprop="url">Flutter 入门</a></h1>
         
 
         <div class="post-meta">
@@ -363,7 +363,7 @@
 
           
           
-             <span id="/2019/04/20/flutter/" class="leancloud_visitors" data-flag-title="flutter">
+             <span id="/2019/04/20/flutter/" class="leancloud_visitors" data-flag-title="Flutter 入门">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  932
                 </span>
               
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -428,7 +428,43 @@
       
         
           
-            
+            <h1 id="Flutter"><a href="#Flutter" class="headerlink" title="Flutter"></a>Flutter</h1><ol>
+<li>需要在官网下载<a href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos对应压缩文件解压后将该文件放在某个目录(该目录会用到)；在" target="_blank" rel="noopener">https://flutter.dev/docs/development/tools/sdk/releases?tab=macos对应压缩文件解压后将该文件放在某个目录(该目录会用到)；在</a> ～/.base_profile 中添加环境变量 export PATH=/Users/jiyajun/myDev/immutable/flutter/bin:$PATH (注意: 更改了终端可视情况更改 ~/.zshrc)</li>
+</ol>
+<h2 id="IOS-开发环境设置"><a href="#IOS-开发环境设置" class="headerlink" title="IOS 开发环境设置"></a>IOS 开发环境设置</h2><h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><ol>
+<li>安装 Xcode 9.0 以上版本</li>
+<li>配置Xcode命令行工具以使用最新Xcode版本 <code>sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</code></li>
+<li>确保已经同意Xcode许可协议或通过命令行 <code>sudo xcodebuild -license</code> 同意<h3 id="设置iOS模拟器"><a href="#设置iOS模拟器" class="headerlink" title="设置iOS模拟器"></a>设置iOS模拟器</h3></li>
+<li><p>在终端输入如下命令启动一个ios模拟器</p>
+<figure class="highlight plain"><figcaption><span>-a Simulator ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  2. 通过模拟器菜单栏的 *硬件&gt;设备* ,确保打开的是64位iPhone 5s或者更新的模拟器</span><br><span class="line">  3. 如果模拟器过大,可以通过模拟器的 *Window&gt;Scale* 菜单下设置设备比例</span><br><span class="line">  4. 通过快捷键 *Commond+w* 关闭当前某个模拟器机型</span><br><span class="line"></span><br><span class="line">## 创建一个Flutter项目</span><br><span class="line">  1. 通过如下命令创建一个Flutter项目</span><br><span class="line">  ``` flutter create my_app</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令完成后会在当前目录创建一个名为my_app的Flutter项目,然后通过下面命令运行它</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my_app</span><br><span class="line">flutter run</span><br><span class="line">// 或者</span><br><span class="line">flutter run -d <span class="string">'iPone X'</span> // -d 后面跟的是具体设备名称，可以是Android或iOS模拟器的名字，也可以是一台已经连接到电脑的Android或iOS的设备</span><br></pre></td></tr></table></figure>
+<p>项目文件信息:<br>文件夹 | 简介<br>– | –<br>ios | ios方面的宿主工程<br>android | andorid方面的宿主工程<br>pubspec.yaml | flutter依赖包配置文件<br>lib | 是flutter的dart方面的代码(该目录下有个项目入口文件main.dart,可直接运行)<br>build | 项目的构建输出目录<br>test | 测试相关文件</p>
+<h2 id="如何将Flutter安装到iOS真机傻上？"><a href="#如何将Flutter安装到iOS真机傻上？" class="headerlink" title="如何将Flutter安装到iOS真机傻上？"></a>如何将Flutter安装到iOS真机傻上？</h2><p>通过 <figure class="highlight plain"><figcaption><span>run ``` 将Flutter应用安装到iOS真机设备，需要一些额外的工具和一个Apple账号，还需要在Xcode中进行设置</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 安装homebrew</span><br><span class="line">2. 更新homebrew ``` brew update</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>打开终端并运行如下命令来安装用于将Flutter应用安装到iOS设备的工具(如果这些命令中有任何一个失败并出错，可运行 <figure class="highlight plain"><figcaption><span>doctor ``` 并安装说明解决问题)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">```bash</span><br><span class="line">  brew install --HEAD usbmuxd</span><br><span class="line">  brew link usbmuxd</span><br><span class="line">  brew install --HEAD libimobiledevice</span><br><span class="line">  brew install ideviceinstaller ios-deploy cocoapods</span><br><span class="line">  pod setup</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>遵循Xcode签名流程来配置你的项目:</p>
+<ul>
+<li>4-1 在你的Flutter项目目录中国呢通过 <figure class="highlight plain"><figcaption><span>ios/Runner.xcworkspace ``` 打开默认的Xcode workspace</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    * 4-2 在Xcode中,选择导航栏main 版左侧中国呢的Runner项目</span><br><span class="line">    * 4-3 在Runner target设置页面中,确保 *常规&gt;签名&gt;团队* 下选择来你的开发团队。当你选择一个团队时,Xcode会创建并下载开发证书，向你的设备注册你的账号,并创建和下载配置文件</span><br><span class="line">  5. 通过 ``` flutter run ``` 运行启动项目</span><br><span class="line"></span><br><span class="line">## Android 开发环境设置</span><br><span class="line">  1. 下载并安装安卓 studio</span><br><span class="line">  2. 在在 ～/.base_profile 或者 ~/.zshrc 文件中配置安卓环境变量</span><br><span class="line">  ```bash</span><br><span class="line">  #Android 环境变量</span><br><span class="line">  export ANDROID_HOME=/Users/jiyajun/Library/Android/sdk</span><br><span class="line">  #Android 模拟器路径</span><br><span class="line">  export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/emulator</span><br><span class="line">  #Android tools路径</span><br><span class="line">  export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/tools</span><br><span class="line">  #Android 平台工具路径</span><br><span class="line">  export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/platform-tools</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>然后可通过 <code>emulator -avd deviceName</code> 启动安卓模拟器</p>
+</li>
+<li>安装 Flutter 和 Dart 插件<ul>
+<li>3-1 打开 <em>Preferences &gt; Plugins</em></li>
+<li>3-2 搜索 <em>Flutter plugin</em> 然后点击安装</li>
+</ul>
+</li>
+<li>如何在Android真机上运行？<ul>
+<li>3-1 在设备上启用 <em>开发人员选项</em> 和 <em>USB调试</em></li>
+<li>3-2 使用USB将手机插入电脑，如果有授权提示需要同意授权</li>
+<li>在终端运行 <code>flutter devices</code> 命令以验证Flutter是否识别你的连接的Android设备</li>
+<li>通过 <code>flutter run</code> 运行启动项目</li>
+</ul>
+</li>
+</ol>
+
           
         
       
@@ -787,7 +823,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">73</span>
+    <span title="Site words total count">1k</span>
   
   -->
 </div>
@@ -823,7 +859,7 @@
 <span class="post-meta-divider">|</span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共73字</span>
+  <span class="post-count">博客全站共1k字</span>
 </div>
 
         
